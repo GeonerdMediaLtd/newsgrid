@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NewsGrid by GeoNerd</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NewsGrid by GeoNerd</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <!-- Splash Screen -->
-  <div id="splash-screen">
-    <div class="splash-content">
-      <img src="https://i.postimg.cc/MG6vL9vY/Gro.png" alt="NewsGrid Logo" class="splash-logo" />
-      <h1>📰 Welcome to<br><span>NewsGrid by GeoNerd</span></h1>
-    </div>
-  </div>
 
-  <!-- Header -->
-  <header class="header">
-    <img src="https://i.postimg.cc/MG6vL9vY/Gro.png" alt="Logo" class="logo" />
-    <h2 class="app-title">NewsGrid by GeoNerd</h2>
-  </header>
+<!-- HEADER -->
+<header class="header">
+<img src="https://i.postimg.cc/MG6vL9vY/Gro.png" class="logo">
+<h2 class="app-title">NewsGrid by GeoNerd</h2>
+</header>
 
-   <!-- News Ticker -->
-<div class="news-ticker">
-  <div class="ticker-label">LIVE</div>
-  <div class="ticker-wrap">
-    <div class="ticker-move">
-      🇧🇩 Bangladesh Election Results — Live seat updates • Party trends • Exit data • Click to view full dashboard →
-    </div>
-  </div>
+<!-- BANGLADESH BUTTON -->
+<div class="special-tabs">
+<a href="https://newsgrid.online/Bangladeshresults/" class="special-btn">
+🇧🇩 Bangladesh Election Results
+</a>
 </div>
 
-  <!-- Main App -->
-  <div id="app" style="display: none;">
-    <div id="category-filter">
-      <select id="categorySelect">
-        <option value="all">All Categories</option>
-      </select>
-    </div>
-    <div id="gallery" class="masonry"></div>
-    <div id="loader" class="loader">Loading...</div>
-  </div>
+<!-- TICKER -->
+<div class="news-ticker-pro">
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <span id="close">&times;</span>
-    <img id="modal-img" class="modal-content" />
-    <button id="prev" class="nav-btn">←</button>
-    <button id="next" class="nav-btn">→</button>
-  </div>
+<div class="ticker-live">
+<span class="live-dot"></span> LIVE
+</div>
 
-  <script src="script.js"></script>
+<div class="ticker-pro-wrap">
+<div class="ticker-pro-move">
+🇧🇩 Bangladesh Election Results — Live seat updates • Party trends • Exit data • Click Bangladesh button above for dashboard →
+</div>
+</div>
+
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+
+<div id="category-filter">
+<select id="categorySelect">
+<option value="all">All Categories</option>
+</select>
+</div>
+
+<div id="gallery" class="masonry"></div>
+<div id="loader" class="loader">Loading...</div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+<span id="close">&times;</span>
+<img id="modal-img" class="modal-content">
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
