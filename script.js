@@ -85,7 +85,7 @@ document.getElementById("prev").onclick=()=>{
 }
 
 modal.onclick=e=>{if(e.target===modal)closeModal();}
-/* ===== LIVE TICKER ROTATION ===== */
+/* ===== SMART LIVE TICKER ROTATION ===== */
 
 const ticker = document.querySelector(".ticker-pro-move");
 
@@ -98,15 +98,18 @@ const headlines = [
 
 let tickerIndex = 0;
 
-function updateTicker(){
- ticker.style.opacity = "0";
-
- setTimeout(()=>{
-   ticker.textContent = headlines[tickerIndex];
-   tickerIndex = (tickerIndex + 1) % headlines.length;
-   ticker.style.opacity = "1";
- },500);
+function setHeadline(text){
+  ticker.style.animation = "none";   // reset animation
+  void ticker.offsetWidth;           // force reflow
+  ticker.textContent = text;
+  ticker.style.animation = "tickerMove 22s linear infinite"; // slower scroll
 }
 
-/* Change headline every 8 seconds */
-setInterval(updateTicker, 8000);
+/* First headline */
+setHeadline(headlines[tickerIndex]);
+
+/* Change only after animation duration */
+ticker.addEventListener("animationiteration", () => {
+  tickerIndex = (tickerIndex + 1) % headlines.length;
+  setHeadline(headlines[tickerIndex]);
+});
