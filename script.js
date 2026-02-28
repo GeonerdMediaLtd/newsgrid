@@ -85,3 +85,28 @@ document.getElementById("prev").onclick=()=>{
 }
 
 modal.onclick=e=>{if(e.target===modal)closeModal();}
+/* ===== LIVE TICKER ROTATION ===== */
+
+const ticker = document.querySelector(".ticker-pro-move");
+
+const headlines = [
+"🔴 BREAKING: Israel declares war on Iran after launching major air strikes — state of emergency announced.",
+"⚠️ Iran responds with missile launches toward Israeli territory — air defense systems activated.",
+"🌍 Global markets react as Middle East conflict escalates between Israel and Iran.",
+"📰 Stay tuned to NewsGrid for latest real-time updates on the Israel–Iran situation."
+];
+
+let tickerIndex = 0;
+
+function updateTicker(){
+ ticker.style.opacity = "0";
+
+ setTimeout(()=>{
+   ticker.textContent = headlines[tickerIndex];
+   tickerIndex = (tickerIndex + 1) % headlines.length;
+   ticker.style.opacity = "1";
+ },500);
+}
+
+/* Change headline every 8 seconds */
+setInterval(updateTicker, 8000);
