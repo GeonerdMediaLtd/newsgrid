@@ -16,7 +16,11 @@ body{font-family:'Segoe UI',sans-serif;background:#f4f4f4;}
 .live-dot{width:8px;height:8px;background:white;border-radius:50%;animation:blink 1s infinite;}
 @keyframes blink{50%{opacity:.3}}
 .ticker-pro-wrap{flex:1;overflow:hidden;}
-.ticker-pro-move{white-space:nowrap;padding-left:100%;animation:tickerMove 18s linear infinite;}
+.ticker-pro-move{
+ white-space:nowrap;
+ padding-left:100%;
+ animation:tickerMove 22s linear infinite;
+}
 @keyframes tickerMove{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
 /* CATEGORY */
