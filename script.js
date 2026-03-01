@@ -92,7 +92,7 @@ const ticker = document.querySelector(".ticker-pro-move");
 const headlines = [
 "🔴 BREAKING: Israel declares war on Iran after launching major air strikes — state of emergency announced.",
 "⚠️ Iran responds with missile launches toward Israeli territory — air defense systems activated.",
-"🌍 Ayatollah Ali Khamenei assasinated.",
+"🌍 Iranian supreme leader Ayatollah Ali Khamenei assassinated.",
 "📰 Stay tuned to NewsGrid for latest real-time updates on the Israel–Iran situation."
 ];
 
